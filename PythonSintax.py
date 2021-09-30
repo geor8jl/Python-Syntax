@@ -126,7 +126,7 @@ print(friends2)
 
 **********Tuplas************
 
-Es un tipo de data structure , container es como una lista y se guardan mucha informacion 
+Es un tipo de data structure , container es como una lista y se guardan mucha informacion
 
 Son inmutables = no cambian o se modifican
 
@@ -179,6 +179,160 @@ print(max_num(355, 4222, 58))
 
 
 **********Better calculator****************
+
+
+num1 = float(input("Enter the first number: "))
+op = input("Enter operator: ")
+num2 = float(input("Enter the second number: "))
+
+if op == "+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "/":
+    print(num1 / num2)
+elif op == "*":
+    print(num1 * num2)
+else:
+    print("Invalid operator")
+
+
+**********Dictionaries************
+Valores en parejas con keys atached to them
+
+
+monthConversions = {
+    0: "January",
+    1: "February",
+    2: "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sep": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December"
+}
+print(monthConversions.get("Luv", "Not a valid key"))
+print(monthConversions[2])
+
+
+
+**********While************
+
+
+i = 1
+
+while i <= 10:
+    print(i)
+    i += 1
+print("Done")
+
+
+*********Juego de adivinanzas **************
+
+
+
+
+secret_word = "giraffe"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+
+while guess != secret_word and not out_of_guesses:
+    if guess_count < guess_limit:
+        guess = input("Enter your guess: ")
+        guess_count += 1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+    print("Out of Guesses, YOU LOSE!")
+else:
+    print("You Win")
+
+
+
+*************For***************
+
+friends = ["Jim", "Karen", "Kevin"]
+
+for friend in friends:
+    print(friend)
+
+for index in range(3, 10):
+    print(index)
+
+for index in range(len(friends)):
+    print(friends[index])
+
+for letter in "friends":
+    print(letter)
+
+
+
+*********Exponent Function**************
+
+
+
+base_num = int(input("Your Number: "))
+pow_num = int(input("Power: "))
+
+
+def raise_to_power(base_num, pow_num):
+    result = 1
+    for index in range(pow_num):
+        result = result * base_num
+    return result
+
+
+print(raise_to_power(base_num, pow_num))
+print(2**3)
+
+
+**********Lista 2D o Matriz*******************
+
+number_grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0],
+]
+
+print(number_grid[2][2])
+
+for row in number_grid:
+    print(row)
+    for col in row:
+        print(col)
+
+
+********** Translator *********************
+
+
+def translate(phrase):
+    translation = ""
+
+    for letter in phrase:
+        if letter.lower() in "aeiou":
+            translation = translation + "g"
+        else:
+            translation = translation + letter
+
+    return translation
+
+
+print(translate(input("Enter your phrase: ")))
+
+
+
+
+
+
+
 
 
 
